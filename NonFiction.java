@@ -11,6 +11,6 @@ public class NonFiction extends Book{
 	
 	@Override
 	public String toString(){
-		return("The Non-Fiction book is named " + getTitle() + " and costs $" + getPrice());
+		return "The Non-Fiction book is named " + getTitle() + " and costs $" + getPrice();
 	}
 }
