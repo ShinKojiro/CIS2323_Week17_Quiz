@@ -18,6 +18,9 @@ public class BookArray{
 			while(trySuccess == false){
 				try{
 					bookTypeChoice = inputDevice.nextInt();
+					if(bookTypeChoice != 1 && bookTypeChoice != 2){
+						throw(new InputMismatchException());
+					}
 					bookType[bookCount] = bookTypeChoice;
 					inputDevice.nextLine();
 					trySuccess = true;
@@ -33,7 +36,7 @@ public class BookArray{
 		}
 
 		inputDevice.close();
-		
+
 		for(int i = 0; i < 10; i++){
 			if(bookType[i] == 1){
 				System.out.println(books[i] + ": Fiction");
